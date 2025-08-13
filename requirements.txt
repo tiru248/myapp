@@ -1,2 +1,9 @@
-flask
+Flask
 gunicorn
+opencv-python-headless
+numpy
+Pillow
+beautifulsoup4
+mediapipe
+rembg
+onnxruntime
