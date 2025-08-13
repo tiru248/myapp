@@ -1,23 +1,23 @@
-import os, json, csv, re, io, zipfile
+import os, json, re, zipfile
 from flask import Flask, render_template, request, jsonify, send_file, redirect, url_for, send_from_directory
-from flask import request, redirect, url_for, jsonify
+
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageChops
 from bs4 import BeautifulSoup
-import cv2
+
 import sys
 import numpy as np
 from io import BytesIO
 import mediapipe as mp
 from rembg import remove
-from pathlib import Path
+
 from math import ceil
 import base64
 import shutil
-from werkzeug.utils import secure_filename
-import glob
+
+
 import itertools 
-from flask import after_this_request
-from werkzeug.utils import secure_filename
+
+
 
 
 from flask import Flask
@@ -61,10 +61,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(CLEANED_FOLDER, exist_ok=True)
 os.makedirs(CAPTURE_DIR, exist_ok=True)
 os.makedirs(CAPTURE_FOLDER, exist_ok=True)
-from PIL import Image
-Image.MAX_IMAGE_PIXELS = None
-counter = itertools.count(1) 
-app = Flask(__name__)
+
 
 
 
