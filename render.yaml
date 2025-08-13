@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: my-flask-app
+    name: myapp
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      apt-get update && apt-get install -y libgl1 libglib2.0-0
+      pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
     pythonVersion: 3.10
